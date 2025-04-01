@@ -1,1 +1,40 @@
+/* Transitions and animations */
+.section-button {
+    transition: all 0.3s ease;
+}
 
+.section-button:hover {
+    background-color: #f1f5f9;
+}
+
+.section-button.active {
+    background-color: #e0f2fe;
+    color: #1d4ed8;
+}
+
+.subsection-button {
+    transition: all 0.2s ease;
+}
+
+.subsection-button:hover {
+    transform: translateY(-2px);
+}
+
+.subsection-button.active {
+    box-shadow: 0 0 0 2px #3b82f6;
+}
+
+/* Hide elements without display:none to allow for transitions */
+.hidden {
+    display: none !important;
+}
+
+/* Content animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
