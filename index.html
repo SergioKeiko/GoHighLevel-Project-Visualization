@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoHighLevel Project Visualization</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto p-4 max-w-6xl">
+        <header class="text-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-800 mb-2">GoHighLevel Project Visualization</h1>
+            <p class="text-gray-600">An interactive map of your business automation ecosystem</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Navigation Column -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h2 class="font-bold text-lg mb-4 text-gray-700 border-b pb-2">Project Components</h2>
+                
+                <!-- Overview Button -->
+                <button 
+                    id="overview-btn"
+                    class="w-full text-left p-3 rounded-md mb-2 flex items-center bg-blue-100 text-blue-700"
+                >
+                    <span class="mr-2">🔍</span>
+                    <span class="font-medium">Project Overview</span>
+                </button>
+                
+                <!-- Section Navigation will be added by JavaScript -->
+                <div id="section-buttons"></div>
+            </div>
+
+            <!-- Visualization Column -->
+            <div class="bg-white p-4 rounded-lg shadow-md col-span-2">
+                <!-- Overview Content -->
+                <div id="overview-content" class="text-center mb-6">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+
+                <!-- Section Content -->
+                <div id="section-content" class="hidden">
+                    <div class="mb-6">
+                        <h2 id="section-title" class="text-xl font-bold mb-2"></h2>
+                        <div id="subsection-buttons" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Subsection Detail View -->
+                    <div id="subsection-content" class="p-6 bg-white rounded-lg shadow-lg border border-gray-200 hidden">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-6 text-center text-gray-500 text-sm">
+            <p>Click on any section or component to explore details</p>
+        </div>
+    </div>
+
+    <script src="js/visualization.js"></script>
+</body>
+</html>
+
+
